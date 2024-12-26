@@ -1,0 +1,12 @@
+<p>This is an example of an uncommon HTML bug.  It involves incorrect nesting of elements within a <code>&lt;details&gt;</code> tag.</p><pre><code>&lt;details&gt;
+  &lt;summary&gt;Details&lt;/summary&gt;
+  &lt;p&gt;This is some text.&lt;/p&gt;
+  &lt;div&gt;
+    &lt;p&gt;This is more text.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;List item 1&lt;/li&gt;
+      &lt;li&gt;List item 2&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;details&gt; &#x27;Nested details which is invalid &#x27;&lt;/details&gt;
+  &lt;/div&gt;
+&lt;/details&gt;</code></pre><p>The problem is that the second <code>&lt;details&gt;</code> element is incorrectly nested inside the first. Although the browser might not always throw an error, it can lead to unexpected behavior, especially with regards to the opening and closing of the details elements.</p>
